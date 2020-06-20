@@ -1,0 +1,13 @@
+{
+  "Bugs": ["bug"],
+  "Feature Request": ["Feature Request"],
+  "User Experience": ["User Experience"],
+  "Documentation": ["Documentation"],
+  "Platforms": ["Platform support", "COMPS", "Local Platform", "SLURM"],
+  "Analyzers": ["Analyzers"],
+  "Configuration": ["Configuration"],
+  "CLI": ["CLI"],
+  "Models": ["Models", "COVID-19"],
+  "Core": ["Core", "Workflows", "Architecture"],
+  "Developer/Test": ["Build/Development Environment", "Test"]
+}

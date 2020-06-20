@@ -1,0 +1,11 @@
+= {{ version }}
+{% if items|is_dict %}
+{% for entry, issues in items|dictsort %}
+== {{ entry }}
+{% for issue in issues %}
+* [{{issue.number}}]({{issue.html_url}}) - {{ issue.title|trim }}{% endfor %}
+{% endfor %}
+{% else %}
+{% for entry in entries %}
+* [{{entry.number}}]({{entry.html_url}}) - {{ entry.title|trim }}{% endfor %}
+{% endif %}

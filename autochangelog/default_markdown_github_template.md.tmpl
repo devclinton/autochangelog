@@ -1,0 +1,18 @@
+Changelog
+=========
+{% for version, entries in items.items() %}
+* [{{ version }}]{% endfor %}
+
+{% for version, entries in items.items() %}
+== {{ version }}
+{% if entries|is_dict %}
+{% for entry, issues in entries|dictsort %}
+=== {{ entry }}
+{% for issue in issues %}
+* [{{issue.number}}]({{issue.html_url}}) - {{ issue.title|trim }}{% endfor %}
+{% endfor %}
+{% else %}
+{% for entry in entries %}
+* [{{entry.number}}]({{entry.html_url}}) - {{ entry.title|trim }}{% endfor %}
+{% endif %}
+{% endfor %}

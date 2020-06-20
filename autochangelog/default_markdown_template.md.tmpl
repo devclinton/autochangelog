@@ -1,0 +1,12 @@
+Changelog
+=========
+{% for version, entries in items.items() %}
+* [{{ version }}]
+{% endfor %}
+
+{% for version, entries in items.items() %}
+=={{ version }}
+{% for entry in entries %}
+* {{ entry|replace("\n", "")|replace("\r", "")|trim }}{% endfor %}
+
+{% endfor %}
