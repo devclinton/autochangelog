@@ -12,7 +12,7 @@ from github import Github, UnknownObjectException, Tag
 from github.Issue import Issue
 from github.Label import Label
 from github.Repository import Repository
-from autochangelog.cli import SrcData
+from autochangelog.data import SrcData
 from autochangelog.utils import generator
 
 

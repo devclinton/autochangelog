@@ -4,8 +4,11 @@ Changelog
 * [{{ version }}]{% endfor %}
 
 {% for version, entries in items.items() %}
-== {{ version }}
-{% for entry in entries %}
-* [{{entry.short_id}}]({{ {{entry.id}}) - {{ entry.message|replace("\n", "")|replace("\r", "")|trim }}{% endfor %}
-
+== {{ version }}{% if entries|is_dict %}
+{% for entry, issues in entries|dictsort %}{% for issue in issues %}
+* [{{issue.short_id}}]( {{issue.id}}) - {{ issue.message|trim }}{% endfor %}{% endfor %}
+{% else %}
+{% for issue in issues %}
+* [{{issue.short_id}}]( {{issue.id}}) - {{ issue.message|trim }}{% endfor %}
+{% endif %}
 {% endfor %}

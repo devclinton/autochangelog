@@ -1,6 +1,4 @@
 import logging
-from dataclasses import dataclass
-from typing import List, Any, Dict
 
 import click
 import coloredlogs
@@ -65,12 +63,6 @@ def process_commands(processors, **kwargs):
     # Evaluate the stream and throw away the items.
     for _ in tqdm(stream, total=len(processors)):
         pass
-
-
-@dataclass
-class SrcData:
-    items: Dict[str, List[Any]]
-    src: str
 
 
 if __name__ == "__main__":

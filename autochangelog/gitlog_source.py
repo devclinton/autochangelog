@@ -5,7 +5,7 @@ import click
 from dataclasses import dataclass, field
 from typing import List
 from pygit2 import Repository, GIT_SORT_TOPOLOGICAL, GIT_SORT_TIME
-from autochangelog.cli import SrcData
+from autochangelog.data import SrcData
 from autochangelog.utils import generator
 
 logger = getLogger(__name__)

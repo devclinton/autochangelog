@@ -126,7 +126,7 @@ def get_template(template, template_types, split_versions):
         if len(template_types) == 1:
             if template_types[0] == 'git':
                 logger.debug("Loading git template")
-                template = LazyFile(DEFAULT_GIT_VERSION, 'r')
+                template = LazyFile(DEFAULT_GIT, 'r')
             elif template_types[0] == 'github':
                 logger.debug("Loading github template")
                 template = LazyFile(DEFAULT_GITHUB_VERSION if split_versions else DEFAULT_GITHUB, 'r')
@@ -141,7 +141,7 @@ def get_index_template(template_types):
     if len(template_types) == 1:
         if template_types[0] == 'git':
             logger.debug("Loading git template")
-            template = LazyFile(DEFAULT_GIT_INDEX_VERSION)
+            template = LazyFile(DEFAULT_GIT)
         elif template_types[0] == 'github':
             logger.debug("Loading github template")
             template = LazyFile(DEFAULT_GITHUB_INDEX_VERSION)
