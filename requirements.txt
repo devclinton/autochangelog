@@ -1,5 +1,5 @@
 click-plugins~=1.1.1
-coloredlogs~=14.0
+coloredlogs~=15.0
 pluggy~=0.13.1
 pygit2
 click
